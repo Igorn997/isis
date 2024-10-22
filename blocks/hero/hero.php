@@ -60,7 +60,7 @@ else: ?>
           <?php endif; ?>
 
           <?php if ($first_number_description): ?>
-            <div class="box-1-text"></div>
+            <div class="box-1-text">
                 <?php echo $first_number_description; ?>
             </div>
           <?php endif; ?>
