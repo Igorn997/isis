@@ -1,0 +1,8 @@
+@import "../../assets/scss/global/variables";
+@import "../../assets/scss/global/mixins";
+
+.hero-wrapper {
+  .box-title {
+    font-family: $primary-font;
+  }
+}

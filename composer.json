@@ -1,0 +1,6 @@
+{
+    "name": "starter-theme/theme-classes",
+    "description": "Starter Theme Composer",
+    "minimum-stability": "stable",
+    "require": {}
+}
