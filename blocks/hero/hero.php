@@ -38,15 +38,17 @@ else: ?>
           <?php endif; ?>
 
           <?php if ($first_button): ?>
-             <a href="<?php echo $first_button['url']; ?>" <?php if ($first_button['target']) echo "target = " . $first_button['target']; ?> class="btn">
-                <?php echo $first_button['title']; ?>                         
-            </a>
-          <?php endif; ?>
+            <div class="button-wrapper">
+              <a href="<?php echo $first_button['url']; ?>" <?php if ($first_button['target']) echo "target = " . $first_button['target']; ?> class="btn">
+                  <?php echo $first_button['title']; ?>                         
+              </a>
+            <?php endif; ?>
 
-          <?php if ($second_button): ?>
-             <a href="<?php echo $second_button['url']; ?>" <?php if ($second_button['target']) echo "target = " . $second_button['target']; ?> class="btn">
-                <?php echo $second_button['title']; ?>                         
-            </a>
+            <?php if ($second_button): ?>
+              <a href="<?php echo $second_button['url']; ?>" <?php if ($second_button['target']) echo "target = " . $second_button['target']; ?> class="btn">
+                  <?php echo $second_button['title']; ?>                         
+              </a>
+          </div>
           <?php endif; ?>
           
 
@@ -54,26 +56,30 @@ else: ?>
         <div class="box-1">
 
           <?php if ($first_number): ?>
-            <div class="box-1-number">
-                <?php echo $first_number; ?>
-            </div>
+            <div class="box-1-number-wrapper">
+              <div class="box-1-number">
+                  <?php echo $first_number; ?>
+              </div>
           <?php endif; ?>
 
           <?php if ($first_number_description): ?>
-            <div class="box-1-text">
-                <?php echo $first_number_description; ?>
+              <div class="box-1-text">
+                  <?php echo $first_number_description; ?>
+              </div>
             </div>
           <?php endif; ?>
 
           <?php if ($second_number): ?>
-            <div class="box-1-number">
-                <?php echo $second_number; ?>
-            </div>
+            <div class="box-1-number-wrapper">
+              <div class="box-1-number">
+                  <?php echo $second_number; ?>
+              </div>
           <?php endif; ?>
 
           <?php if ($second_number_description): ?>
-            <div class="box-1-text">
-                <?php echo $second_number_description; ?>
+              <div class="box-1-text">
+                  <?php echo $second_number_description; ?>
+              </div>
             </div>
           <?php endif; ?>
         </div>

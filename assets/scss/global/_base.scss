@@ -1,6 +1,18 @@
 body {
-    color: $primary-color;
-    font-family: $primary-font;
-    font-size: $font-size-base;
-    margin: 0;
+  color: $primary-color;
+  font-family: $primary-font;
+  font-size: $font-size-base;
+  margin: 0;
+}
+
+.btn {
+  display: block;
+  padding: 16px 20px;
+  margin-top: 20px;
+  color: #1f3233;
+  background-color: $primary-color;
+  border-radius: 12px;
+}
+
+.btn-secondary {
 }

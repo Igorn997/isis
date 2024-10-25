@@ -2,7 +2,109 @@
 @import "../../assets/scss/global/mixins";
 
 .hero-wrapper {
-  .box-title {
-    font-family: $primary-font;
+  .container {
+    .hero-inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+
+      .left {
+        flex: 1;
+        max-width: 50%;
+        gap: 16px;
+        display: flex;
+        flex-direction: column;
+
+        @include max-mq($md) {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+
+        .box {
+          background-color: #ebf2f2;
+          padding: 45px 48px;
+          border-radius: 20px;
+
+          h1 {
+            color: #1f3233;
+            text-transform: uppercase;
+            font-family: $secondary-font;
+            font-weight: 900;
+            font-size: 52px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid #717171;
+            line-height: 1.1;
+          }
+
+          p {
+            padding-top: 20px;
+            color: #1f3233;
+          }
+
+          .button-wrapper {
+            display: flex;
+            gap: 16px;
+
+            .btn {
+              width: 100%;
+              text-align: center;
+            }
+          }
+        }
+
+        .box-1 {
+          display: flex;
+          background-color: #ebf2f2;
+          border-radius: 20px;
+          padding: 38px 48px;
+          align-items: center;
+
+          @include max-mq($sm) {
+            padding: 24px;
+          }
+
+          @include max-mq(500px) {
+            display: block;
+          }
+
+          .box-1-number-wrapper {
+            display: flex;
+            align-items: center;
+            flex: 1;
+
+            @include max-mq($md) {
+              justify-content: center;
+            }
+
+            .box-1-number {
+              font-size: 55px;
+              font-weight: 600;
+              color: #01a2b9;
+            }
+
+            .box-1-text {
+              color: #1f3233;
+              padding-left: 13px;
+            }
+          }
+        }
+      }
+
+      .right {
+        flex: 1;
+        max-width: 50%;
+
+        @include max-mq($md) {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+
+        img {
+          height: 100%;
+          object-fit: cover;
+          border-radius: 20px;
+        }
+      }
+    }
   }
 }
