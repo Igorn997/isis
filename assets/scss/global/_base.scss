@@ -9,10 +9,26 @@ body {
   display: block;
   padding: 16px 20px;
   margin-top: 20px;
-  color: #1f3233;
+  color: $black;
   background-color: $primary-color;
   border-radius: 12px;
+  border: 1px solid $primary-color;
+
+  .btn-image{
+    margin-left: 10px;
+  }
 }
 
 .btn-secondary {
+  display: block;
+  padding: 16px 20px;
+  margin-top: 20px;
+  color: $black;
+  background-color: transparent;
+  border-radius: 12px;
+  border: 1px solid $black;
+
+  .btn-image{
+    margin-left: 10px;
+  }
 }

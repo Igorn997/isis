@@ -40,13 +40,19 @@ else: ?>
           <?php if ($first_button): ?>
             <div class="button-wrapper">
               <a href="<?php echo $first_button['url']; ?>" <?php if ($first_button['target']) echo "target = " . $first_button['target']; ?> class="btn">
-                  <?php echo $first_button['title']; ?>                         
+                  <?php echo $first_button['title']; ?>
+                    <span class="btn-image">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/btn-arrow.svg" alt="arrow" />
+                    </span>                         
               </a>
             <?php endif; ?>
 
             <?php if ($second_button): ?>
-              <a href="<?php echo $second_button['url']; ?>" <?php if ($second_button['target']) echo "target = " . $second_button['target']; ?> class="btn">
-                  <?php echo $second_button['title']; ?>                         
+              <a href="<?php echo $second_button['url']; ?>" <?php if ($second_button['target']) echo "target = " . $second_button['target']; ?> class="btn-secondary">
+                  <?php echo $second_button['title']; ?>  
+                    <span class="btn-image">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/btn-arrow.svg" alt="arrow" />
+                    </span>                       
               </a>
           </div>
           <?php endif; ?>
