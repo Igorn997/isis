@@ -14,8 +14,9 @@ body {
   border-radius: 12px;
   border: 1px solid $primary-color;
 
-  .btn-image{
+  .btn-image {
     margin-left: 10px;
+    transition: all ease 0.3s;
   }
 }
 
@@ -28,7 +29,7 @@ body {
   border-radius: 12px;
   border: 1px solid $black;
 
-  .btn-image{
+  .btn-image {
     margin-left: 10px;
   }
 }

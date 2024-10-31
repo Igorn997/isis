@@ -1,6 +1,67 @@
-@import '../../assets/scss/global/variables';
-@import '../../assets/scss/global/mixins';
+@import "../../assets/scss/global/variables";
+@import "../../assets/scss/global/mixins";
 
 .products-categories-wrapper {
-    
+  color: #1f3233;
+  padding-top: 48px;
+
+  .products-categories-inner {
+    background-color: #a9d1d3;
+    border-radius: 20px;
+    padding: 48px;
+
+    .products-categories-boxes {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-auto-rows: 1fr;
+      column-gap: 15px;
+      row-gap: 15px;
+
+      @include max-mq($md) {
+        grid-template-columns: 1fr 1fr;
+      }
+      @include max-mq($sm) {
+        grid-template-columns: 1fr;
+      }
+
+      .first-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .box {
+        border: 1px solid white;
+        border-radius: 20px;
+        padding: 16px;
+        transition: all ease 0.3s;
+
+        &:hover {
+          background-color: #01a2b9;
+          border: 1px solid #01a2b9;
+
+          h3 {
+            color: white;
+          }
+
+          p {
+            color: white;
+          }
+        }
+
+        cursor: pointer;
+
+        .box-image {
+          padding: 30px 0;
+        }
+
+        .box-text {
+          p {
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
 }

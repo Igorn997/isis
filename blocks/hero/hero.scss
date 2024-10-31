@@ -45,10 +45,21 @@
             display: flex;
             gap: 16px;
 
+            @include max-mq($sm) {
+              flex-direction: column;
+            }
+
             .btn,
             .btn-secondary {
               width: 100%;
               text-align: center;
+              transition: all ease 0.3s;
+
+              &:hover {
+                color: white;
+                background-color: #01a2b9;
+                border: 1px solid #01a2b9;
+              }
             }
           }
         }
@@ -61,7 +72,7 @@
           align-items: center;
 
           @include max-mq($sm) {
-            padding: 24px;
+            padding: 14px;
           }
 
           @include max-mq(500px) {
