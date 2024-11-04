@@ -10,6 +10,14 @@
     border-radius: 20px;
     padding: 48px;
 
+    @include max-mq($ip) {
+      padding: 27px;
+    }
+
+    @include max-mq($px) {
+      padding: 18px;
+    }
+
     .products-categories-boxes {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
@@ -21,6 +29,7 @@
       @include max-mq($md) {
         grid-template-columns: 1fr 1fr;
       }
+
       @include max-mq($sm) {
         grid-template-columns: 1fr;
       }

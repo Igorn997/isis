@@ -81,8 +81,10 @@ else: ?>
                                             <span class="close-modal">&times;</span>
                                             <div class="modal-content-inner">
                                                 <div class="left">
-                                                    <h2 class="modal-heading"><?php echo esc_html($certification_card['heading']); ?></h2>
-                                                    <p class="modal-description"><?php echo esc_html($certification_card['description']); ?></p>
+                                                    <div class="left-text">
+                                                        <h2 class="modal-heading"><?php echo esc_html($certification_card['heading']); ?></h2>
+                                                        <p class="modal-description"><?php echo esc_html($certification_card['description']); ?></p>
+                                                    </div>
                                                     <div class="button-wrapper">
                                                         <a href="<?php echo esc_url($certification_card['button']['url']); ?>" <?php if ($certification_card['button']['target']) echo 'target="' . esc_attr($certification_card['button']['target']) . '"'; ?> class="btn">
                                                             <?php echo esc_html($certification_card['button']['title']); ?>

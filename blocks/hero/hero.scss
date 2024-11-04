@@ -34,11 +34,19 @@
             padding-bottom: 18px;
             border-bottom: 1px solid #717171;
             line-height: 1.1;
+
+            @include max-mq($ip) {
+              font-size: 44px;
+            }
           }
 
           p {
             padding-top: 20px;
             color: #1f3233;
+
+            @include max-mq($ip) {
+              font-size: 20px;
+            }
           }
 
           .button-wrapper {
