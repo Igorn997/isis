@@ -38,12 +38,26 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        .number-text{
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding-bottom: 70px;
+
+          .products-categories-number{
+            font-size: 55px;
+            color: #01A2B9;
+            font-weight: 600;
+          }
+        }
+
       }
 
       .box {
         border: 1px solid white;
         border-radius: 20px;
-        padding: 16px;
+        padding: 35px;
         transition: all ease 0.3s;
 
         &:hover {

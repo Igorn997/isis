@@ -24,11 +24,17 @@ else: ?>
                             </h2>
                         <?php endif; ?>
 
-                        <?php if ($text): ?>
-                            <p class="products-categories-text">
-                                <?php echo $text; ?>
-                            </p>
-                        <?php endif; ?>
+                        <div class="number-text">
+                            <?php if ($number_of_products): ?>
+                                <p class="products-categories-number">
+                                    <?php echo $number_of_products; ?>
+                                </p>
+                            <?php endif; ?>
+
+                            <?php if ($text): ?>                        
+                                <?php echo $text; ?>                        
+                            <?php endif; ?>
+                        </div>
                     </div>
 
                     <?php foreach($boxes as $box): ?>

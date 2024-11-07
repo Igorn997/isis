@@ -5,9 +5,7 @@
   padding-top: 16px;
 
   .partners-inner {
-    display: flex;
-    align-items: center;
-    gap: 16px;
+    overflow: hidden;
     border-radius: 20px;
     padding: 32px 0 23px 39px;
     background-color: #ebf2f2;
@@ -18,9 +16,22 @@
     @include max-mq($sm) {
       padding: 32px 24px 23px 30px;
     }
+  }
 
-    .partners-logo {
-      flex: 1;
+  .slick-track {
+    display: flex !important;
+
+    .slick-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      box-sizing: border-box;
+
+      @include max-mq(700px) {
+        margin: 0 50px;
+        height: 70px;
+      }
     }
   }
 }
