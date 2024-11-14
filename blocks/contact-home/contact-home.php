@@ -18,9 +18,9 @@ else: ?>
                 <div class="contact-home-left">
                     <div class="contact-home-left-inner">
                         <?php if ($heading): ?>
-                        <h2 class="contact-home-heading">
+                        <div class="contact-home-heading">
                             <?php echo $heading; ?>
-                        </h2>
+                        </div>
                         <?php endif; ?>
 
                         <?php if ($description): ?>
@@ -41,6 +41,7 @@ else: ?>
                 </div>
                 <div class="contact-home-right">
                     <div class="contact-home-right-inner">
+                    <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 2 ) ); ?>
                     </div>
                 </div>
             </div>

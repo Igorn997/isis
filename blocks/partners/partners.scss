@@ -20,6 +20,7 @@
 
   .slick-track {
     display: flex !important;
+    align-items: center;
 
     .slick-slide {
       display: flex;
@@ -31,6 +32,10 @@
       @include max-mq(700px) {
         margin: 0 50px;
         height: 70px;
+      }
+
+      @include max-mq($sm) {
+        margin: 0 22px;
       }
     }
   }

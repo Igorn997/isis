@@ -1,6 +1,111 @@
-@import '../../assets/scss/global/variables';
-@import '../../assets/scss/global/mixins';
+@import "../../assets/scss/global/variables";
+@import "../../assets/scss/global/mixins";
 
 .satisfied-customers-wrapper {
-    
+  padding-top: 48px;
+
+  .satisfied-customers-inner {
+    padding: 48px;
+    color: #1f3233;
+    background-color: #a9d1d3;
+    border-radius: 20px;
+
+    @include max-mq($sm) {
+      padding: 25px;
+    }
+
+    .satisfied-customers-title {
+      h2 {
+        text-transform: uppercase;
+        font-size: 48px;
+        font-weight: 700;
+
+        @include max-mq($md) {
+          font-size: 33px;
+        }
+      }
+
+      p {
+        margin-top: 20px;
+        font-size: 15px;
+
+        @include max-mq($md) {
+          font-size: 17px;
+        }
+      }
+    }
+
+    .satisfied-customers-cards {
+      display: flex;
+      justify-content: space-between;
+      gap: 25px;
+
+      @include max-mq($md) {
+        flex-direction: column;
+      }
+
+      .satisfied-customers-card {
+        flex: 1;
+
+        .satisfied-customers-card-inner {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+
+          .satisfied-customers-card-text {
+            text-transform: uppercase;
+            font-size: 15px;
+            font-weight: 500;
+            margin-top: 25px;
+          }
+        }
+      }
+
+      .satisfied-customers-last-card {
+        .satisfied-customers-last-card-inner {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 12px;
+
+          .satisfied-customers-last-card-span {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 12px;
+            span {
+              background-color: #01a2b9;
+              border-radius: 20px;
+              padding: 6px 32px 6px 43px;
+              color: white;
+              font-weight: 400;
+
+              @include max-mq($sm) {
+                font-size: 14px;
+                padding: 6px 30px 6px 43px;
+              }
+
+              @include max-mq($ip) {
+                font-size: 14px;
+                padding: 6px 24px 6px 34px;
+              }
+            }
+          }
+
+          .des-review {
+            text-align: center;
+            margin-top: 14px;
+
+            p {
+              margin-top: 25px;
+              font-weight: 500;
+              text-transform: uppercase;
+              width: fit-content;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
 }

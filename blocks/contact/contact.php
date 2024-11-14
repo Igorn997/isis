@@ -69,7 +69,7 @@ else: ?>
                                 </div>   
                             </div>                         
                         </div>      
-                         <div class="contact-left-card">
+                         <div class="contact-left-card-last">
                             <?php if ( $socials ) : ?> 
                                 <div class="contact-socials">
                                     <div class="contact-socials-cards">
