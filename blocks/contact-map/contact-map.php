@@ -1,32 +1,32 @@
 <?php 
 /*
-* Block Name: Contact Home
+* Block Name: Contact Map
 * Post Type: page 
 */
 
-$contact_home_heading = get_field('contact_home_heading');
+$heading = get_field('heading');
 $description = get_field('description');
-$button = get_field('button');
+$button = get_field('link');
 
 if( isset( $block['data']['preview_image_help'] )  ) :
     echo '<img src="'. $block['data']['preview_image_help'] .'" style="width:100%; height:auto;">';
 else: ?>
 
-<section class="contact-home-wrapper">
+<section class="contact-map-wrapper">
   <div class="container">
-    <div class="contact-home-inner">
-      <div class="contact-home-left">
-        <div class="contact-home-left-inner">
-          <?php if ($contact_home_heading): ?>
-          <h2 class="contact-home-heading">
-            <?php echo $contact_home_heading; ?>
-          </h2>
+    <div class="contact-map-inner">
+      <div class="contact-map-left">
+        <div class="contact-map-left-inner">
+          <?php if ($heading): ?>
+          <div class="contact-map-heading">
+            <?php echo $heading; ?>
+          </div>
           <?php endif; ?>
 
           <?php if ($description): ?>
-          <p class="contact-home-description">
+          <div class="contact-map-description">
             <?php echo $description; ?>
-          </p>
+          </div>
           <?php endif; ?>
 
           <?php if ($button): ?>
@@ -40,12 +40,13 @@ else: ?>
           <?php endif; ?>
         </div>
       </div>
-      <div class="contact-home-right">
-        <div class="contact-home-right-inner">
+      <div class="contact-map-right">
+        <div class="contact-map-right-inner">
+          [wpgmza id="1"]
+
         </div>
       </div>
     </div>
-  </div>
-</section><!-- .contact-home-wrapper-->
+</section><!-- .contact-map-wrapper-->
 
 <?php endif; ?>

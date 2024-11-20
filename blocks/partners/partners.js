@@ -12,8 +12,8 @@ $(document).ready(function () {
         breakpoint: 700,
         settings: {
           slidesToShow: 2,
-          autoplay: true, 
-          infinite: true,         
+          autoplay: true,
+          infinite: true,
         },
       },
     ],

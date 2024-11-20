@@ -1,6 +1,12 @@
-@import '../../assets/scss/global/variables';
-@import '../../assets/scss/global/mixins';
+@import "../../assets/scss/global/variables";
+@import "../../assets/scss/global/mixins";
 
 .product-slider-wrapper {
-    
+  .product-slider-left-inner-box {
+    overflow: hidden;
+  }
+
+  .slick-track {
+    display: flex !important;
+  }
 }
