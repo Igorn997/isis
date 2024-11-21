@@ -48,30 +48,32 @@ else: ?>
                     <?php endforeach; ?>
                     <div class="satisfied-customers-last-card">
                         <div class="satisfied-customers-last-card-inner">
-                            <?php if( $review1 ): ?>                  
-                                 <span><?php echo $review1 ?></span>                    
-                             <?php endif; ?>
+                            <div class="satisfied-customers-last-card-span">
+                                <?php if( $review1 ): ?>                  
+                                    <span><?php echo $review1 ?></span>                    
+                                <?php endif; ?>
 
-                            <?php if( $review2 ): ?>                  
-                                 <span><?php echo $review2 ?></span>                    
-                             <?php endif; ?>
+                                <?php if( $review2 ): ?>                  
+                                    <span><?php echo $review2 ?></span>                    
+                                <?php endif; ?>
 
-                            <?php if( $review3 ): ?>                  
-                                 <span><?php echo $review3 ?></span>                    
-                             <?php endif; ?>
+                                <?php if( $review3 ): ?>                  
+                                    <span><?php echo $review3 ?></span>                    
+                                <?php endif; ?>
 
-                            <?php if( $review4 ): ?>                  
-                                 <span><?php echo $review4 ?></span>                    
-                             <?php endif; ?>
+                                <?php if( $review4 ): ?>                  
+                                    <span><?php echo $review4 ?></span>                    
+                                <?php endif; ?>
 
-                            <?php if( $review5 ): ?>                  
-                                 <span><?php echo $review5 ?></span>                    
-                             <?php endif; ?>
-
-                             <?php if( $description_of_reviews ): ?>                  
-                                <?php echo $description_of_reviews ?>                 
-                             <?php endif; ?>
-
+                                <?php if( $review5 ): ?>                  
+                                    <span><?php echo $review5 ?></span>                    
+                                <?php endif; ?>
+                             </div>
+                            <div class="des-review">
+                                <?php if( $description_of_reviews ): ?>                  
+                                    <?php echo $description_of_reviews ?>                 
+                                <?php endif; ?>
+                            </div>
                         </div>                          
                     </div>
                 </div>

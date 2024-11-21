@@ -1,6 +1,113 @@
-@import '../../assets/scss/global/variables';
-@import '../../assets/scss/global/mixins';
+@import "../../assets/scss/global/variables";
+@import "../../assets/scss/global/mixins";
 
 .contact-wrapper {
-    
+  .contact-wrapper-inner {
+    display: flex;
+
+    @include max-mq($md) {
+      flex-direction: column;
+    }
+
+    .contact-left {
+      flex: 0 0 50%;
+      max-width: 0 0 50%;
+
+      .contact-left-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .contact-left-card {
+          background-color: #ebf2f2;
+          border-radius: 20px;
+          padding: 39px 48px 42px;
+
+          @include max-mq($sm) {
+            padding: 35px 37px;
+          }
+
+          @include max-mq($px) {
+            padding: 35px;
+          }
+
+          .contact-heading {
+            p {
+              font-size: 53px;
+              font-weight: 900;
+              color: #1f3233;
+              padding-bottom: 18px;
+              border-bottom: 1px solid #1f3233;
+
+              @include max-mq($sm) {
+                font-size: 33px;
+              }
+            }
+          }
+
+          .contact-description {
+            p {
+              color: #1f3233;
+              margin-top: 20px;
+              font-size: 15px;
+            }
+          }
+
+          .contact-info {
+            display: flex;
+            color: #1f3233;
+            justify-content: space-between;
+
+            @include max-mq($sm) {
+              flex-direction: column;
+              gap: 20px;
+              padding: 0 32px;
+            }
+
+            @include max-mq($px) {
+              padding: 0 31px;
+            }
+
+            .contact-info-email {
+              display: flex;
+              align-items: center;
+              gap: 24px;
+            }
+
+            .contact-info-phone {
+              display: flex;
+              align-items: center;
+              gap: 24px;
+            }
+          }
+        }
+
+        .contact-left-card-last {
+          .contact-socials {
+            .contact-socials-cards {
+              .contact-socials-card {
+                display: flex;
+                gap: 16px;
+
+                a {
+                  background-color: #ebf2f2;
+                  padding: 42px 66px 35px;
+                  border-radius: 20px;
+
+                  @include max-mq($sm) {
+                    padding: 34px 38px 24px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .contact-right {
+      flex: 0 0 50%;
+      max-width: 0 0 50%;
+    }
+  }
 }
