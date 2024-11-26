@@ -32,9 +32,9 @@ else: ?>
           <?php endif; ?>
 
           <?php if ($text_description): ?>
-            <p class="box-text">
+            <div class="box-text">
                 <?php echo $text_description; ?>
-            </p>
+            </div>
           <?php endif; ?>
 
           <?php if ($first_button): ?>

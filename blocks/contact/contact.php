@@ -20,7 +20,6 @@ else: ?>
     <section class="contact-wrapper">
         <div class="container">
             <div class="contact-wrapper-inner">
-                <div class="contact-left">
                     <div class="contact-left-cards">
                         <div class="contact-left-card">
                             <?php if ( $heading ) : ?>
@@ -83,10 +82,12 @@ else: ?>
                                     </div>                                   
                                 </div>
                             <?php endif; ?>
-                        </div>  
-                </div>
-                <div class="contact-right">
-                </div>
+                        </div> 
+                     </div> 
+                        
+                        <div class="contact-right">
+                            <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 1 ) ); ?>
+                        </div>
             </div>
         </div>
     </section><!-- .contact-wrapper-->

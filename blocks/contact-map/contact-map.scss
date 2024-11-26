@@ -1,6 +1,86 @@
-@import '../../assets/scss/global/variables';
-@import '../../assets/scss/global/mixins';
+@import "../../assets/scss/global/variables";
+@import "../../assets/scss/global/mixins";
 
 .contact-map-wrapper {
-    
+  padding-top: 48px;
+  .contact-map-inner {
+    display: flex;
+    gap: 16px;
+    @include max-mq($md) {
+      flex-direction: column;
+    }
+    .contact-map-left {
+      color: #1f3233;
+      padding: 40px 48px;
+      background-color: #ebf2f2;
+      border-radius: 20px;
+
+      @include max-mq($md) {
+        display: flex;
+        justify-content: center;
+      }
+      .contact-map-left-inner {
+        .contact-map-heading {
+          p {
+            font-family: "Satoshi", sans-serif;
+            font-size: 31px;
+            font-weight: 700;
+
+            @include max-mq($md) {
+              font-size: 50px;
+            }
+
+            @include max-mq($sm) {
+              font-size: 31px;
+            }
+          }
+        }
+
+        .contact-map-description {
+          p {
+            margin-top: 34px;
+
+            @include max-mq($md) {
+              font-size: 25px;
+            }
+
+            @include max-mq($sm) {
+              font-size: 16px;
+            }
+          }
+        }
+        .btn {
+          background-color: #ebf2f2;
+          border: 1px solid #1f3233;
+          margin-top: 133px;
+          max-width: fit-content;
+          padding: 12px 15px;
+
+          @include max-mq($md) {
+            padding: 19px 36px;
+            font-size: 20px;
+          }
+
+          @include max-mq($sm) {
+            padding: 12px 15px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    .contact-map-right {
+      .contact-map-right-inner {
+        .mapouter {
+          width: 100%;
+          .gmap_canvas {
+            border-radius: 20px;
+            width: 100%;
+            iframe {
+              border-radius: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
 }

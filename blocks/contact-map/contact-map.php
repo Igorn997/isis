@@ -42,10 +42,7 @@ else: ?>
       </div>
       <div class="contact-map-right">
         <div class="contact-map-right-inner">
-          [wpgmza id="1"]
-
-        </div>
-      </div>
+        <div class="mapouter"><div class="gmap_canvas"><iframe width="795" height="389" id="gmap_canvas" src="https://maps.google.com/maps?q=isis%20doo&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><br><style>.mapouter{position:relative;text-align:right;height:389px;width:795px;}</style><a href="https://www.embedgooglemap.net">embedgooglemap.net</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:389px;width:795px;}</style></div></div>
     </div>
 </section><!-- .contact-map-wrapper-->
 

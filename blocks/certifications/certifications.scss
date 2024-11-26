@@ -307,10 +307,6 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 40%);
-
-    @include max-mq($md) {
-      top: 30px;
-    }
   }
 
   .modal-content {
@@ -324,8 +320,18 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 20%);
     border-radius: 20px;
 
+    @include max-mq($md) {
+      margin-top: 130px;
+      width: 80%;
+    }
+
+    @include max-mq($sm) {
+      margin-top: 115px;
+      width: 80%;
+    }
+
     @include max-mq($ip) {
-      margin-top: 30px;
+      margin-top: 70px;
       width: 80%;
     }
 

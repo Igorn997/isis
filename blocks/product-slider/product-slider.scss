@@ -2,9 +2,120 @@
 @import "../../assets/scss/global/mixins";
 
 .product-slider-wrapper {
-  .product-slider-left-inner-box {
-    overflow: hidden;
+  padding-top: 48px;
+
+  .product-slider {
+    display: flex;
+    height: 100%;
+    gap: 1.5%;
+
+    @include max-mq($md) {
+      flex-direction: column;
+    }
+
+    .product-slider-left {
+      flex: 0 0 49.25%;
+      max-width: 49.25%;
+
+      @include max-mq($md) {
+        max-width: 100%;
+      }
+
+      .product-slider-left-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .product-slider-left-inner-box:nth-child(1) {
+          background-color: #ebf2f2;
+          border-radius: 20px;
+          padding: 37px 48px 47px 48px;
+
+          .product-slider-heading {
+            h2 {
+              font-family: "Inter", sans-serif;
+              font-weight: 700;
+              text-transform: uppercase;
+              font-size: 48px;
+              color: #1f3233;
+            }
+          }
+
+          .product-slider-description {
+            p {
+              font-size: 16px;
+              color: #1f3233;
+              font-weight: 400;
+              margin-top: 20px;
+            }
+          }
+        }
+
+        .product-slider-left-inner-box:nth-child(2) {
+          border: 1px solid #dcdcdc;
+          border-radius: 20px;
+          position: relative;
+
+          .product-slider-images {
+            overflow: hidden;
+            max-height: 600px;
+
+            .product-slider-image {
+              img {
+                width: 100%;
+                object-fit: cover;
+              }
+            }
+          }
+
+          .product-slider-arrows {
+            position: absolute;
+            top: 50%;
+
+            button:nth-child(1) {
+              position: absolute;
+              left: 20px;
+              background-color: transparent;
+              border: none;
+              cursor: pointer;
+            }
+
+            button:nth-child(2) {
+              position: absolute;
+              right: -546px;
+              background-color: transparent;
+              border: none;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+
+    .product-slider-right {
+      flex: 0 0 49.25%;
+      max-width: 49.25%;
+
+      @include max-mq($md) {
+        max-width: 100%;
+      }
+
+      .product-slider-right-inner {
+        height: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
   }
+}
+
+.product-slider-left-inner-box {
+  overflow: hidden;
 
   .slick-track {
     display: flex !important;

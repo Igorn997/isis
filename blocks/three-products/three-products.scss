@@ -1,6 +1,167 @@
-@import '../../assets/scss/global/variables';
-@import '../../assets/scss/global/mixins';
+@import "../../assets/scss/global/variables";
+@import "../../assets/scss/global/mixins";
 
 .three-products-wrapper {
-    
+  padding-top: 48px;
+
+  .three-products-cards {
+    display: flex;
+    gap: 16px;
+
+    @include max-mq($md) {
+      flex-direction: column;
+    }
+    .three-products-card:nth-child(2) {
+      .three-products-card-image {
+        padding: 50px 33px 47px 64px;
+      }
+    }
+
+    .three-products-card:nth-child(1) {
+      .three-products-card-image {
+        padding: 58px 26px 46px 20px;
+      }
+    }
+
+    .three-products-card:nth-child(3) {
+      .three-products-card-image {
+        padding: 51px 31px 58px 30px;
+      }
+    }
+
+    .three-products-card {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 30px;
+      background-color: #ebf2f2;
+      border-radius: 20px;
+
+      @include max-mq($md) {
+        align-items: center;
+        text-align: center;
+      }
+
+      @include max-mq($sm) {
+        align-items: center;
+        text-align: center;
+      }
+
+      .three-products-card-flag {
+        display: flex;
+        gap: 10px;
+
+        .three-products-card-flag-text {
+          color: #717171;
+        }
+      }
+
+      .three-products-card-description {
+        color: #717171;
+
+        p {
+          @include max-mq($md) {
+            font-size: 21px;
+          }
+        }
+      }
+
+      .three-products-card-buttons {
+        display: flex;
+        gap: 16px;
+
+        .btn {
+          width: fit-content;
+          padding: 16px 15px;
+          cursor: pointer;
+          transition: all ease 0.3s;
+
+          &:hover {
+            background-color: #01a2b9;
+            border: 1px solid #01a2b9;
+            color: white;
+          }
+
+          @include max-mq($md) {
+            font-size: 22px;
+          }
+
+          @include max-mq($mb) {
+            flex-direction: column;
+            font-size: 16px;
+            padding: 16px 24px;
+          }
+
+          @include max-mq($ip) {
+            flex-direction: column;
+            font-size: 16px;
+            padding: 16px 18px;
+          }
+
+          @include max-mq(390px) {
+            flex-direction: column;
+            font-size: 16px;
+            padding: 16px 15px;
+          }
+
+          @include max-mq(380px) {
+            flex-direction: column;
+            font-size: 14px;
+            padding: 16px;
+          }
+
+          @include max-mq($px) {
+            flex-direction: column;
+            font-size: 14px;
+            padding: 16px 11px;
+          }
+        }
+
+        .btn-secondary {
+          width: fit-content;
+          padding: 16px 29px;
+          cursor: pointer;
+          &:hover {
+            background-color: #01a2b9;
+            border: 1px solid #01a2b9;
+            color: white;
+          }
+
+          @include max-mq($md) {
+            font-size: 22px;
+          }
+
+          @include max-mq($mb) {
+            flex-direction: column;
+            font-size: 16px;
+            padding: 16px 35px;
+          }
+
+          @include max-mq($ip) {
+            flex-direction: column;
+            font-size: 16px;
+            padding: 16px 32px;
+          }
+
+          @include max-mq(390px) {
+            flex-direction: column;
+            font-size: 14px;
+            padding: 16px 28px;
+          }
+
+          @include max-mq(380px) {
+            flex-direction: column;
+            font-size: 14px;
+            padding: 16px 25px;
+          }
+
+          @include max-mq($px) {
+            flex-direction: column;
+            font-size: 14px;
+            padding: 16px 22px;
+          }
+        }
+      }
+    }
+  }
 }

@@ -18,15 +18,15 @@ else: ?>
       <div class="contact-home-left">
         <div class="contact-home-left-inner">
           <?php if ($contact_home_heading): ?>
-          <h2 class="contact-home-heading">
-            <?php echo $contact_home_heading; ?>
-          </h2>
+              <div class="contact-home-heading">
+                <?php echo $contact_home_heading; ?>
+              </div>
           <?php endif; ?>
 
           <?php if ($description): ?>
-          <p class="contact-home-description">
+          <div class="contact-home-description">
             <?php echo $description; ?>
-          </p>
+          </div>
           <?php endif; ?>
 
           <?php if ($button): ?>
@@ -42,6 +42,7 @@ else: ?>
       </div>
       <div class="contact-home-right">
         <div class="contact-home-right-inner">
+        <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 2 ) ); ?>
         </div>
       </div>
     </div>
