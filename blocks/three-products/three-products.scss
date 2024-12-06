@@ -11,23 +11,23 @@
     @include max-mq($md) {
       flex-direction: column;
     }
-    .three-products-card:nth-child(2) {
-      .three-products-card-image {
-        padding: 50px 33px 47px 64px;
-      }
-    }
+    // .three-products-card:nth-child(2) {
+    //   .three-products-card-image {
+    //     padding: 50px 33px 47px 64px;
+    //   }
+    // }
 
-    .three-products-card:nth-child(1) {
-      .three-products-card-image {
-        padding: 58px 26px 46px 20px;
-      }
-    }
+    // .three-products-card:nth-child(1) {
+    //   .three-products-card-image {
+    //     padding: 58px 26px 46px 20px;
+    //   }
+    // }
 
-    .three-products-card:nth-child(3) {
-      .three-products-card-image {
-        padding: 51px 31px 58px 30px;
-      }
-    }
+    // .three-products-card:nth-child(3) {
+    //   .three-products-card-image {
+    //     padding: 51px 31px 58px 30px;
+    //   }
+    // }
 
     .three-products-card {
       flex: 1;
@@ -36,6 +36,12 @@
       padding: 30px;
       background-color: #ebf2f2;
       border-radius: 20px;
+
+      .three-products-card-image {
+        height: 209px;
+        text-align: center;
+        padding-top: 58px;
+      }
 
       @include max-mq($md) {
         align-items: center;
