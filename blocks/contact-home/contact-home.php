@@ -18,9 +18,9 @@ else: ?>
       <div class="contact-home-left">
         <div class="contact-home-left-inner">
           <?php if ($contact_home_heading): ?>
-              <div class="contact-home-heading">
-                <?php echo $contact_home_heading; ?>
-              </div>
+          <div class="contact-home-heading">
+            <?php echo $contact_home_heading; ?>
+          </div>
           <?php endif; ?>
 
           <?php if ($description): ?>
@@ -34,7 +34,10 @@ else: ?>
             class="btn">
             <?php echo $button['title']; ?>
             <span class="btn-image">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/btn-arrow.svg" alt="arrow" />
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/btn-arrow.svg" alt="arrow"
+                class="arrow1" />
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow-right.svg" alt="arrow"
+                class="arrow2" />
             </span>
           </a>
           <?php endif; ?>
@@ -42,7 +45,7 @@ else: ?>
       </div>
       <div class="contact-home-right">
         <div class="contact-home-right-inner">
-        <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 2 ) ); ?>
+          <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 2 ) ); ?>
         </div>
       </div>
     </div>

@@ -301,43 +301,37 @@
   .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 40%);
+    backdrop-filter: blur(10px);
+    align-items: center;
+    justify-content: center;
   }
 
   .modal-content {
     background-color: #fefefe;
-    margin: 5% auto;
     padding: 20px;
-    border: 1px solid #888;
-    width: 65%;
+
+    max-width: 50%;
+    width: 100%;
     max-height: 80%;
-    overflow-y: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 20%);
     border-radius: 20px;
 
-    @include max-mq($md) {
-      margin-top: 130px;
-      width: 80%;
-    }
-
     @include max-mq($sm) {
-      margin-top: 115px;
-      width: 80%;
+      max-width: 90%;
     }
 
-    @include max-mq($ip) {
-      margin-top: 70px;
-      width: 80%;
+    .overflow {
+      overflow-y: auto;
     }
 
     .modal-content-inner {
       display: flex;
-      justify-content: space-between;
+      max-height: 70vh;
 
       @include max-mq($md) {
         flex-wrap: wrap;
@@ -369,8 +363,7 @@
 
         .btn {
           width: fit-content;
-          padding: 14px 42px;
-          transition: all ease 0.3s;
+          transition: all ease 0.2s;
 
           @include max-mq($md) {
             display: none;
@@ -388,19 +381,17 @@
           }
         }
       }
+
+      .right {
+        text-align: right;
+
+        img {
+          height: 99%;
+        }
+      }
     }
 
     .close-modal {
-      color: #aaa;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-    }
-
-    .close-modal:hover,
-    .close-modal:focus {
-      color: black;
-      text-decoration: none;
       cursor: pointer;
     }
   }
@@ -469,9 +460,6 @@
             .btn {
               margin-top: 29px;
               width: fit-content;
-              padding: 11px 30px;
-              font-weight: 500;
-              transition: all ease 0.3s;
 
               @include max-mq($md) {
                 font-size: 18px;
@@ -483,17 +471,6 @@
 
               @include max-mq($xs) {
                 font-size: 13px;
-              }
-
-              &:hover {
-                color: white;
-                background-color: #01a2b9;
-                border: 1px solid #01a2b9;
-
-                .btn-image img {
-                  -webkit-filter: invert(100%); /* Safari/Chrome */
-                  filter: invert(100%);
-                }
               }
             }
           }
@@ -543,8 +520,11 @@
             .certifications-list-item {
               background-color: #ebf2f2;
               border-radius: 16px;
-              padding: 8px 21px;
+              padding: 15px 30px;
               cursor: pointer;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
 
               .certifications-list-item-heading {
                 font-size: 20px;

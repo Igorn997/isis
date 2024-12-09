@@ -77,10 +77,12 @@
         gap: 16px;
 
         .btn {
-          width: fit-content;
+          flex: 0 0 50%;
+          max-width: 50%;
           padding: 16px 15px;
           cursor: pointer;
           transition: all ease 0.3s;
+          text-align: center;
 
           &:hover {
             background-color: #01a2b9;
@@ -124,9 +126,11 @@
         }
 
         .btn-secondary {
-          width: fit-content;
+          flex: 0 0 50%;
+          max-width: 50%;
           padding: 16px 29px;
           cursor: pointer;
+          text-align: center;
           &:hover {
             background-color: #01a2b9;
             border: 1px solid #01a2b9;

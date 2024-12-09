@@ -63,7 +63,9 @@
             .product-slider-image {
               img {
                 width: 100%;
-                object-fit: cover;
+                object-fit: scale-down;
+                height: 100%;
+                object-position: center;
               }
             }
           }
@@ -119,5 +121,19 @@
 
   .slick-track {
     display: flex !important;
+
+    .slick-slide {
+      height: fit-content;
+
+      @include max-mq($sm) {
+        height: inherit !important;
+      }
+
+      div {
+        @include max-mq($sm) {
+          height: 100%;
+        }
+      }
+    }
   }
 }

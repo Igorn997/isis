@@ -1,3 +1,132 @@
 @import "global/variables";
 @import "global/mixins";
 
+.footer-widgets-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $primary-color;
+  color: $black;
+  padding: 50px 55px;
+  margin-top: 48px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+
+  @include max-mq(500px) {
+    padding: 50px 20px;
+  }
+
+  .footer-column-1,
+  .footer-column-2,
+  .footer-column-3,
+  .footer-column-4 {
+    flex: 1;
+
+    @include max-mq($md) {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    @include max-mq($sm) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      text-align: center;
+      padding-bottom: 33px !important;
+    }
+  }
+
+  .footer-column-1 {
+    border: 1px solid #546363;
+    padding: 40px;
+    border-radius: 20px;
+    margin-right: 90px;
+
+    @include max-mq($md) {
+      margin-right: 0;
+      padding: 0;
+      border: none;
+    }
+
+    .wp-block-image {
+      margin-bottom: 32px;
+    }
+
+    p {
+      @include max-mq($md) {
+        padding-bottom: 33px;
+        width: 70%;
+      }
+
+      @include max-mq($sm) {
+        margin: 0 auto;
+        padding-bottom: 0;
+      }
+    }
+
+    .lf-social-wrapper {
+      margin-top: 32px;
+
+      @include max-mq($sm) {
+        justify-content: center;
+      }
+    }
+  }
+
+  .footer-column-2,
+  .footer-column-3 {
+    .widget-title {
+      font-weight: 500;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: $black;
+      padding-bottom: 33px;
+    }
+
+    ul li a {
+      font-weight: 400;
+      padding-bottom: 10px;
+      display: inline-block;
+    }
+  }
+
+  .footer-column-4 {
+    h4 {
+      font-weight: 500;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: $black;
+      padding-bottom: 28px;
+    }
+  }
+
+  .site-info {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 370px;
+    margin-top: -30px;
+
+    @include max-mq($md) {
+      margin-top: 40px;
+      padding-left: 0;
+    }
+
+    .footer-copyright {
+      display: block;
+      border-top: 1px solid #546363;
+      padding-top: 32px;
+      color: #546363;
+      font-size: 14px;
+
+      @include max-mq($sm) {
+        text-align: center;
+      }
+    }
+  }
+
+  .menu li a {
+    transition: all ease 0.3s;
+
+    &:hover {
+      opacity: 0.4;
+    }
+  }
+}

@@ -31,10 +31,13 @@ else: ?>
 
           <?php if ($button): ?>
           <a href="<?php echo $button['url']; ?>" <?php if ($button['target']) echo "target = " . $button['target']; ?>
-            class="btn">
+            class="btn-secondary">
             <?php echo $button['title']; ?>
             <span class="btn-image">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/btn-arrow.svg" alt="arrow" />
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/btn-arrow.svg" alt="arrow"
+                class="arrow1" />
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow-right.svg" alt="arrow"
+                class="arrow2" />
             </span>
           </a>
           <?php endif; ?>
@@ -42,8 +45,29 @@ else: ?>
       </div>
       <div class="contact-map-right">
         <div class="contact-map-right-inner">
-        <div class="mapouter"><div class="gmap_canvas"><iframe width="795" height="389" id="gmap_canvas" src="https://maps.google.com/maps?q=isis%20doo&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><br><style>.mapouter{position:relative;text-align:right;height:389px;width:795px;}</style><a href="https://www.embedgooglemap.net">embedgooglemap.net</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:389px;width:795px;}</style></div></div>
-    </div>
+          <div class="mapouter">
+            <div class="gmap_canvas"><iframe width="795" height="389" id="gmap_canvas"
+                src="https://maps.google.com/maps?q=isis%20doo&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                scrolling="no" marginheight="0" marginwidth="0"></iframe><br>
+              <style>
+              .mapouter {
+                position: relative;
+                text-align: right;
+                height: 389px;
+                width: 795px;
+              }
+              </style><a href="https://www.embedgooglemap.net">embedgooglemap.net</a>
+              <style>
+              .gmap_canvas {
+                overflow: hidden;
+                background: none !important;
+                height: 389px;
+                width: 795px;
+              }
+              </style>
+            </div>
+          </div>
+        </div>
 </section><!-- .contact-map-wrapper-->
 
 <?php endif; ?>

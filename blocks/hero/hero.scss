@@ -61,13 +61,6 @@
             .btn-secondary {
               width: 100%;
               text-align: center;
-              transition: all ease 0.3s;
-
-              &:hover {
-                color: white;
-                background-color: #01a2b9;
-                border: 1px solid #01a2b9;
-              }
             }
           }
         }
@@ -78,6 +71,7 @@
           border-radius: 20px;
           padding: 38px 48px;
           align-items: center;
+          justify-content: space-around;
 
           @include max-mq($sm) {
             padding: 14px;
@@ -87,16 +81,17 @@
             display: block;
           }
 
-          .box-1-number-wrapper {
+          .box-1-number-wrapper,
+          .box-2-number-wrapper {
             display: flex;
             align-items: center;
-            flex: 1;
 
             @include max-mq($md) {
               justify-content: center;
             }
 
-            .box-1-number {
+            .box-1-number,
+            .box-2-number {
               font-size: 55px;
               font-weight: 600;
               color: #01a2b9;

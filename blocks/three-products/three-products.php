@@ -48,9 +48,6 @@ else: ?>
             <?php if ($feature_first_button['target']) echo "target = " . $feature_first_button['target']; ?>
             class="btn">
             <?php echo $feature_first_button['title']; ?>
-            <span class="btn-image">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/btn-arrow.svg" alt="arrow" />
-            </span>
           </a>
           <?php endif; ?>
 
@@ -59,9 +56,7 @@ else: ?>
             <?php if ($feature_second_button['target']) echo "target = " . $feature_second_button['target']; ?>
             class="btn-secondary">
             <?php echo $feature_second_button['title']; ?>
-            <span class="btn-image">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/btn-arrow.svg" alt="arrow" />
-            </span>
+
           </a>
           <?php endif; ?>
         </div>

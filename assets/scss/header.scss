@@ -14,6 +14,10 @@
       padding: 10px;
       justify-content: space-between;
 
+      @include max-mq($responsive-toggle-breakpoint) {
+        background-color: #ebf2f2;
+      }
+
       .menu-toggle-wrapper {
         .menu-toggle {
           padding-right: 20px;
@@ -21,6 +25,8 @@
         }
       }
       .site-branding-main-logo {
+        flex: 1;
+
         .site-title {
           a {
             img {
@@ -30,13 +36,48 @@
         }
       }
       .main-navigation {
+        display: flex;
+        justify-content: center;
         margin: 0;
+        flex: 2;
+        gap: 50px;
+
+        @include max-mq($md) {
+          flex: unset;
+          flex-direction: column;
+          gap: 30px;
+        }
+
         .main-menu-container {
           .main-header-menu {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+
+            @include max-mq($responsive-toggle-breakpoint) {
+              gap: 30px;
+            }
+
             li {
               color: #1f3233;
+              cursor: pointer;
+
               a {
                 color: #1f3233;
+                transition: all 0.3s ease;
+
+                &:hover {
+                  opacity: 0.4;
+
+                  @include max-mq($responsive-toggle-breakpoint) {
+                    opacity: 1;
+                  }
+                }
+
+                @include max-mq($responsive-toggle-breakpoint) {
+                  font-size: 24px;
+                  gap: 25px;
+                }
               }
             }
           }
@@ -44,14 +85,53 @@
       }
 
       .menu-button-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex: 1;
+
+        @include max-mq($md) {
+          flex: unset;
+          justify-content: center;
+        }
+
+        &.mobile {
+          display: none;
+
+          .menu-button {
+            display: none;
+
+            @include max-mq($md) {
+              display: block !important;
+              height: fit-content;
+              margin-right: 0;
+            }
+          }
+
+          @include max-mq($md) {
+            display: flex !important;
+          }
+        }
+
         .menu-button {
           margin-top: 0;
           padding: 9px 17px;
-          background-color: #a9d1d3;
+          background-color: $primary-color;
           border-radius: 12px;
-          font-weight: 600;
+          font-weight: 500;
           font-size: 16px;
           border: none;
+          width: fit-content;
+          transition: all 0.3s ease;
+
+          @include max-mq($responsive-toggle-breakpoint) {
+            margin-right: 20px;
+          }
+
+          &:hover {
+            color: $white;
+            background-color: $secondary-color;
+          }
 
           @include max-mq($md) {
             display: none;
@@ -60,5 +140,45 @@
       }
     }
   }
+
+  .lf-social-wrapper {
+    display: none;
+
+    @include max-mq($responsive-toggle-breakpoint) {
+      display: flex;
+      justify-content: center;
+    }
+  }
 }
+
+.language-switcher {
+  margin-right: 30px;
+  color: $black;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.language-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.language-menu a {
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.language-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+.language-switcher:hover .language-menu {
+  display: block; /* Prikazuje podmeni na hover */
+}
+
 /* critical:end */
