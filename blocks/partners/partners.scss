@@ -5,16 +5,30 @@
   padding-top: 16px;
 
   .partners-inner {
+    display: none;
     overflow: hidden;
     border-radius: 20px;
     padding: 32px 0 23px 39px;
     background-color: #ebf2f2;
+
+    &.slick-initialized {
+      display: block;
+    }
 
     @include max-mq($md) {
       padding: 32px 14px 23px 35px;
     }
     @include max-mq($sm) {
       padding: 32px 24px 23px 30px;
+    }
+
+    .partners-logo img {
+      opacity: 0.5;
+      transition: all 0.3s ease;
+
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 

@@ -11,6 +11,7 @@
 
     @include max-mq($md) {
       flex-direction: column;
+      gap: 16px;
     }
 
     .product-slider-left {
@@ -61,31 +62,40 @@
             max-height: 600px;
 
             .product-slider-image {
+              position: relative;
+
               img {
                 width: 100%;
                 object-fit: cover;
+                height: 100%;
+                object-position: center;
               }
             }
           }
-
           .product-slider-arrows {
-            position: absolute;
-            top: 50%;
-
-            button:nth-child(1) {
+            .slick-prev1 {
               position: absolute;
               left: 20px;
               background-color: transparent;
               border: none;
               cursor: pointer;
+              top: 50%;
+              transform: translateY(-50%);
             }
 
-            button:nth-child(2) {
+            .slick-next1 {
               position: absolute;
-              right: -546px;
+              right: 20px;
               background-color: transparent;
               border: none;
               cursor: pointer;
+              top: 50%;
+              transform: translateY(-50%);
+            }
+
+            .slick-disabled {
+              opacity: 0.4;
+              cursor: not-allowed;
             }
           }
         }
@@ -117,7 +127,26 @@
 .product-slider-left-inner-box {
   overflow: hidden;
 
+  .slick-list {
+    margin: 0 -27px;
+  }
+
   .slick-track {
     display: flex !important;
+    max-height: 600px;
+
+    .slick-slide {
+      // display: flex; /* Ili inline-block, zavisno od dizajna */
+      justify-content: center;
+      align-items: center;
+      margin: 0 27px;
+      height: inherit !important;
+
+      div {
+        height: 100%;
+      }
+    }
+
+    /* the parent */
   }
 }

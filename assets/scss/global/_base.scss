@@ -5,6 +5,30 @@ body {
   margin: 0;
 }
 
+body.menu-opened {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: $black;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: $black;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $primary-color;
+}
+
 .btn {
   display: block;
   padding: 16px 20px;
@@ -13,10 +37,36 @@ body {
   background-color: $primary-color;
   border-radius: 12px;
   border: 1px solid $primary-color;
+  transition: all ease 0.2s;
+
+  &:hover {
+    color: white;
+    background-color: #01a2b9;
+    border: 1px solid #01a2b9;
+
+    .arrow2 {
+      display: unset !important;
+      margin-bottom: -2px;
+    }
+
+    .arrow1 {
+      display: none !important;
+    }
+  }
 
   .btn-image {
+    display: inline-block;
     margin-left: 10px;
     transition: all ease 0.3s;
+    width: 20px;
+
+    .arrow2 {
+      display: none;
+    }
+
+    .arrow1 {
+      display: unset;
+    }
   }
 }
 
@@ -28,8 +78,53 @@ body {
   background-color: transparent;
   border-radius: 12px;
   border: 1px solid $black;
+  transition: all 0.2s ease;
 
   .btn-image {
     margin-left: 10px;
+  }
+
+  &:hover {
+    color: white;
+    background-color: #01a2b9;
+    border: 1px solid #01a2b9;
+
+    .arrow2 {
+      display: unset !important;
+      margin-bottom: -2px;
+    }
+
+    .arrow1 {
+      display: none !important;
+    }
+  }
+
+  .btn-image {
+    display: inline-block;
+    margin-left: 10px;
+    transition: all ease 0.3s;
+    width: 20px;
+
+    .arrow2 {
+      display: none;
+    }
+
+    .arrow1 {
+      display: unset;
+    }
+  }
+}
+
+.lf-social-wrapper {
+  display: flex;
+  gap: 32px;
+
+  .social-icon-menu-items {
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+      opacity: 0.4;
+    }
   }
 }

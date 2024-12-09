@@ -32,6 +32,8 @@
 
       @include max-mq($sm) {
         grid-template-columns: 1fr;
+        grid-template-rows: unset;
+        grid-auto-rows: unset;
       }
 
       .first-box {
@@ -44,6 +46,10 @@
           align-items: center;
           gap: 10px;
           padding-bottom: 70px;
+
+          @include max-mq($sm) {
+            padding: 30px 0;
+          }
 
           .products-categories-number {
             font-size: 55px;

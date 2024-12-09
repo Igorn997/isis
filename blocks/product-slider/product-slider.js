@@ -9,5 +9,6 @@ $(document).ready(function () {
     infinite: false,
     prevArrow: $(".slick-prev1"),
     nextArrow: $(".slick-next1"),
+    adaptiveHeight: true, // Sprečava prazne prostore zbog visine
   });
 });

@@ -28,14 +28,16 @@ else: ?>
           </div>
           <div class="product-slider-left-inner-box">
             <div class="product-slider-images">
-              <?php foreach ($product_slider_images as $image): 
-                $slide_image = $image['image'];
-                ?>
+              <?php foreach ($product_slider_images as $image): ?>
+              <?php if (!empty($image['image']['url'])): // Proverite da li URL slike postoji ?>
               <div class="product-slider-image">
-                <img src="<?php echo $slide_image['url']; ?>" alt="<?php echo $slide_image['alt']; ?>">
+                <img src="<?php echo esc_url($image['image']['url']); ?>"
+                  alt="<?php echo esc_attr($image['image']['alt'] ?? ''); ?>">
               </div>
+              <?php endif; ?>
               <?php endforeach; ?>
             </div>
+
             <div class="product-slider-arrows">
               <button type='button' class='slick-prev1 pull-left'><svg width="40" height="40" viewBox="0 0 40 40"
                   fill="none" xmlns="http://www.w3.org/2000/svg">

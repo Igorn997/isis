@@ -13,56 +13,56 @@ else: ?>
 
 <section class="featured-products-wrapper">
   <div class="container">
-    
+
     <?php if ($feature_heading): ?>
-      <h2 class="section-title">
-        <?php echo $feature_heading; ?>
-      </h2>
+    <h2 class="section-title">
+      <?php echo $feature_heading; ?>
+    </h2>
     <?php endif; ?>
 
     <?php if ($feature_cards): ?>
-      <div class="featured-products-cards">
-        <?php foreach ($feature_cards as $card): 
+    <div class="featured-products-cards">
+      <?php foreach ($feature_cards as $card): 
           $company_logo = $card['company_logo'];
           $button_feature = $card['button_feature'];
           $main_image_feature = $card['main_image_feature'];
           $product_name = $card['product_name'];
           $product_description = $card['product_description'];
         ?>
-          <div class="card">
-            <div class="card-content">
-              <div class="card-company">
-                <?php if ($company_logo): ?>
-                  <img src="<?php echo $company_logo['url']; ?>" alt="<?php echo $company_logo['alt']; ?>">
-                <?php endif; ?>
+      <div class="card">
+        <div class="card-content">
+          <div class="card-company">
+            <?php if ($company_logo): ?>
+            <img src="<?php echo $company_logo['url']; ?>" alt="<?php echo $company_logo['alt']; ?>">
+            <?php endif; ?>
 
-                <?php if ($button_feature): ?>
-                  <div class="card-button">
-                    <a href="<?php echo $button_feature['url']; ?>"><?php echo $button_feature['title']; ?></a>
-                  </div>
-                <?php endif; ?>
-              </div>
-
-              <?php if ($main_image_feature): ?>
-                <div class="card-image">
-                  <img src="<?php echo $main_image_feature['url']; ?>" alt="<?php echo $main_image_feature['alt']; ?>">
-                </div>
-              <?php endif; ?>
-
-              <?php if ($product_name): ?>
-                <div class="card-product">
-                  <h3 class="card-product-name">
-                    <?php echo $product_name; ?>
-                  </h3>
-                  <p class="card-product-description">
-                    <?php echo $product_description; ?>
-                  </p>
-                </div>
-              <?php endif; ?>
+            <?php if ($button_feature): ?>
+            <div class="card-button">
+              <a href="<?php echo $button_feature['url']; ?>"><?php echo $button_feature['title']; ?></a>
             </div>
+            <?php endif; ?>
           </div>
-        <?php endforeach; ?>
+
+          <?php if ($main_image_feature): ?>
+          <div class="card-image">
+            <img src="<?php echo $main_image_feature['url']; ?>" alt="<?php echo $main_image_feature['alt']; ?>">
+          </div>
+          <?php endif; ?>
+
+          <?php if ($product_name): ?>
+          <div class="card-product">
+            <h3 class="card-product-name">
+              <?php echo $product_name; ?>
+            </h3>
+            <p class="card-product-description">
+              <?php echo $product_description; ?>
+            </p>
+          </div>
+          <?php endif; ?>
+        </div>
       </div>
+      <?php endforeach; ?>
+    </div>
     <?php endif; ?>
   </div>
 </section><!-- .featured-products-wrapper -->

@@ -49,12 +49,9 @@
             }
           }
         }
-        .btn {
-          background-color: #ebf2f2;
-          border: 1px solid #1f3233;
+        .btn-secondary {
           margin-top: 133px;
           max-width: fit-content;
-          padding: 12px 15px;
 
           @include max-mq($md) {
             padding: 19px 36px;

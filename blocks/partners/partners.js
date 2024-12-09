@@ -2,11 +2,12 @@ require("slick-carousel");
 
 $(document).ready(function () {
   $(".partners-inner").slick({
-    slidesToShow: 5,
+    slidesToShow: 4,
     slidesToScroll: 1,
     dots: false,
     arrows: false,
-    infinite: false,
+    infinite: true,
+    autoplay: true,
     responsive: [
       {
         breakpoint: 700,
