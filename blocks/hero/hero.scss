@@ -85,6 +85,8 @@
 
           .box-1-number-wrapper,
           .box-2-number-wrapper {
+          .box-1-number-wrapper,
+          .box-2-number-wrapper {
             display: flex;
             align-items: center;
 
@@ -92,6 +94,8 @@
               justify-content: center;
             }
 
+            .box-1-number,
+            .box-2-number {
             .box-1-number,
             .box-2-number {
               font-size: 55px;

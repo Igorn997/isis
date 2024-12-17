@@ -53,11 +53,37 @@ html {
       display: none !important;
     }
   }
+  transition: all ease 0.2s;
+
+  &:hover {
+    color: white;
+    background-color: #01a2b9;
+    border: 1px solid #01a2b9;
+
+    .arrow2 {
+      display: unset !important;
+      margin-bottom: -2px;
+    }
+
+    .arrow1 {
+      display: none !important;
+    }
+  }
 
   .btn-image {
     display: inline-block;
+    display: inline-block;
     margin-left: 10px;
     transition: all ease 0.3s;
+    width: 20px;
+
+    .arrow2 {
+      display: none;
+    }
+
+    .arrow1 {
+      display: unset;
+    }
     width: 20px;
 
     .arrow2 {
@@ -78,6 +104,7 @@ html {
   background-color: transparent;
   border-radius: 12px;
   border: 1px solid $black;
+  transition: all 0.2s ease;
   transition: all 0.2s ease;
 
   .btn-image {

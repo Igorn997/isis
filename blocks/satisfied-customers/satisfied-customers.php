@@ -33,73 +33,79 @@ else: ?>
         <?php echo $description; ?>
         <?php endif; ?>
       </div>
+      <?php if( $description ): ?>
+      <?php echo $description; ?>
+      <?php endif; ?>
+    </div>
 
-      <div class="satisfied-customers-cards">
-        <?php foreach( $cards as $card ): ?>
-        <div class="satisfied-customers-card">
-          <div class="satisfied-customers-card-inner">
-            <div class="satisfied-customers-card-image">
-              <img src="<?php echo $card['image']['url']; ?>" alt="<?php echo $card['image']['alt']; ?>">
-            </div>
-            <div class="satisfied-customers-card-text">
-              <?php echo $card['heading']; ?>
-            </div>
+    <div class="satisfied-customers-cards">
+      <?php foreach( $cards as $card ): ?>
+      <div class="satisfied-customers-card">
+        <div class="satisfied-customers-card-inner">
+          <div class="satisfied-customers-card-image">
+            <img src="<?php echo $card['image']['url']; ?>" alt="<?php echo $card['image']['alt']; ?>">
+          </div>
+          <div class="satisfied-customers-card-text">
+            <?php echo $card['heading']; ?>
           </div>
         </div>
-        <?php endforeach; ?>
-        <div class="satisfied-customers-last-card">
-          <div class="satisfied-customers-last-card-inner">
-            <div class="satisfied-customers-last-card-span">
-              <?php if( $review1 ): ?>
-              <div class="review rev1">
-                <p><?php echo $review1 ?>
-                <div class='review-line'></div>
-                </p>
-              </div>
-              <?php endif; ?>
-
-              <?php if( $review2 ): ?>
-              <div class="review rev2">
-                <p><?php echo $review2 ?>
-                <div class='review-line'></div>
-                </p>
-              </div>
-              <?php endif; ?>
-
-              <?php if( $review3 ): ?>
-              <div class="review rev3">
-                <p><?php echo $review3 ?>
-                <div class='review-line'></div>
-                </p>
-              </div>
-              <?php endif; ?>
-
-              <?php if( $review4 ): ?>
-              <div class="review rev4">
-                <p><?php echo $review4 ?>
-                <div class='review-line'></div>
-                </p>
-              </div>
-              <?php endif; ?>
-
-              <?php if( $review5 ): ?>
-              <div class="review rev5">
-                <p><?php echo $review5 ?>
-                <div class='review-line'></div>
-                </p>
-              </div>
-              <?php endif; ?>
+      </div>
+      <?php endforeach; ?>
+      <div class="satisfied-customers-last-card">
+        <div class="satisfied-customers-last-card-inner">
+          <div class="satisfied-customers-last-card-span">
+            <?php if( $review1 ): ?>
+            <div class="review rev1">
+              <p><?php echo $review1 ?>
+              <div class='review-line'></div>
+              </p>
             </div>
-            <div class="des-review">
-              <?php if( $description_of_reviews ): ?>
-              <?php echo $description_of_reviews ?>
-              <?php endif; ?>
+            <?php endif; ?>
+
+            <?php if( $review2 ): ?>
+            <div class="review rev2">
+              <p><?php echo $review2 ?>
+              <div class='review-line'></div>
+              </p>
             </div>
+            <?php endif; ?>
+
+            <?php if( $review3 ): ?>
+            <div class="review rev3">
+              <p><?php echo $review3 ?>
+              <div class='review-line'></div>
+              </p>
+            </div>
+            <?php endif; ?>
+
+            <?php if( $review4 ): ?>
+            <div class="review rev4">
+              <p><?php echo $review4 ?>
+              <div class='review-line'></div>
+              </p>
+            </div>
+            <?php endif; ?>
+
+            <?php if( $review5 ): ?>
+            <div class="review rev5">
+              <p><?php echo $review5 ?>
+              <div class='review-line'></div>
+              </p>
+            </div>
+            <?php endif; ?>
+          </div>
+          <div class="des-review">
+            <?php if( $description_of_reviews ): ?>
+            <?php echo $description_of_reviews ?>
+            <?php endif; ?>
           </div>
         </div>
       </div>
     </div>
   </div>
+  </div>
+
+</section><!-- .satisfied-customers-wrapper-->
 
 </section><!-- .satisfied-customers-wrapper-->
 
