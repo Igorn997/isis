@@ -115,6 +115,16 @@ html {
   }
 }
 
+h2 {
+  width: fit-content;
+
+  .line {
+    width: 0;
+    height: 2px;
+    background-color: $black;
+  }
+}
+
 .lf-social-wrapper {
   display: flex;
   gap: 32px;

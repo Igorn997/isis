@@ -51,32 +51,42 @@ else: ?>
           <div class="satisfied-customers-last-card-inner">
             <div class="satisfied-customers-last-card-span">
               <?php if( $review1 ): ?>
-              <div class="review">
-                <p><?php echo $review1 ?></p>
+              <div class="review rev1">
+                <p><?php echo $review1 ?>
+                <div class='review-line'></div>
+                </p>
               </div>
               <?php endif; ?>
 
               <?php if( $review2 ): ?>
               <div class="review rev2">
-                <p><?php echo $review2 ?></p>
+                <p><?php echo $review2 ?>
+                <div class='review-line'></div>
+                </p>
               </div>
               <?php endif; ?>
 
               <?php if( $review3 ): ?>
               <div class="review rev3">
-                <p><?php echo $review3 ?></p>
+                <p><?php echo $review3 ?>
+                <div class='review-line'></div>
+                </p>
               </div>
               <?php endif; ?>
 
               <?php if( $review4 ): ?>
               <div class="review rev4">
-                <p><?php echo $review4 ?></p>
+                <p><?php echo $review4 ?>
+                <div class='review-line'></div>
+                </p>
               </div>
               <?php endif; ?>
 
               <?php if( $review5 ): ?>
               <div class="review rev5">
-                <p><?php echo $review5 ?></p>
+                <p><?php echo $review5 ?>
+                <div class='review-line'></div>
+                </p>
               </div>
               <?php endif; ?>
             </div>

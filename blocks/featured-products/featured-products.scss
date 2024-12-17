@@ -87,6 +87,11 @@
       display: flex;
       max-width: 369px;
       flex-wrap: wrap;
+      transition: all 0.3s ease;
+
+      &:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 10%);
+      }
 
       .card-content {
         display: flex;

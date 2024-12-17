@@ -13,4 +13,18 @@ function enqueue_gsap_scripts() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_gsap_scripts');
 
+// function starter_enqueue_product_scripts() {
+//     if ( is_singular( 'product' ) ) { // Proverava da li je single post za proizvod
+//         wp_enqueue_script(
+//             'hero', // Handle za skriptu
+//             get_template_directory_uri() . '/blocks/hero/hero.js', // Putanja do skripte
+//             array( 'jquery' ), // Zavisi od jQuery-a
+//             null, // Verzija
+//             true // Učitaj u footer-u
+//         );
+//     }
+// }
+// add_action( 'wp_enqueue_scripts', 'starter_enqueue_product_scripts' );
+
+
 ?>
